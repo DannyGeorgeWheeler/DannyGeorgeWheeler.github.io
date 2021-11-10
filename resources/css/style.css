@@ -1,0 +1,110 @@
+/* GENERAL STYLES */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'roboto';
+    line-height: 1.4rem;
+    background-color: hsl(220, 45%, 10%);
+    color: #ddd;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: hsl(43, 90%, 53%);
+    color: hsl(220, 47%, 10%);
+    text-decoration: none;
+}
+
+/* NAVIGATION BAR - GENERAL */
+
+#navBar {
+    display: flex;
+    height: 55px;
+    border-bottom: solid 1px hsl(220, 47%, 15%);
+}
+
+.navButton, .toolButton {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 55px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    border-right: solid 1px hsl(220, 47%, 15%);
+}
+
+.navButton:hover {
+    color: #ddd;
+    background-color: hsl(220, 47%, 7%);
+    cursor: pointer;
+    border-bottom: solid 1px hsl(204, 90%, 53%);
+}
+
+.toolButton:hover {
+    color: hsl(43, 90%, 53%);
+    background-color: hsl(220, 47%, 7%);
+    cursor: pointer;
+}
+
+/* NAVIGATION BAR - LOGO */
+
+#shapes {
+    max-width: 55px;
+    max-height: 25px;
+}
+
+.line {
+    stroke-width: 10px;
+}
+
+#line1 {
+    stroke:hsl(323, 90%, 53%);
+}
+
+#line2 {
+    stroke:hsl(204, 90%, 53%);
+}
+
+#line3 {
+    stroke:hsl(43, 90%, 53%);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#logo:hover {
+    color:hsl(204, 90%, 53%);
+    border-bottom: none;
+}
+
+/* NAVIGATION BAR - RIGHT ALIGNED BUTTONS */
+
+#toolbar {
+    display: flex;
+    margin-left: auto;
+}
+
+.fa-external-link-alt{
+    /*visibility: hidden;*/
+    font-size: 0.7rem;
+    vertical-align: super;
+}
+
+.fa-github, .fa-moon, .fa-sun {
+    font-size: 1.3rem;
+    line-height: 55px;
+}
+
+.fa-sun {
+    display: none;
+}
