@@ -12,45 +12,60 @@
     <body>
 
         <!-- NAVIGATION BAR -->
-        <header>
-            <nav id='navBar'>
-                
-                <a role='button' class='navButton' id='logo'>
-                    <svg id='shapes'>
-                        <line class='line' id='line1' x1="25" y1="-5" x2="10" y2="30" />
-                        <line class='line' id='line2' x1="35" y1="-5" x2="20" y2="30" />
-                        <line class='line' id='line3' x1="45" y1="-5" x2="30" y2="30" />
-                    </svg>
-                    DW.Tech
+        <nav id='navBar'>
+            
+            <a role='button' class='navButton' id='logo'>
+                <svg id='shapes'>
+                    <line class='line' id='line1' x1="25" y1="-5" x2="10" y2="30" />
+                    <line class='line' id='line2' x1="35" y1="-5" x2="20" y2="30" />
+                    <line class='line' id='line3' x1="45" y1="-5" x2="30" y2="30" />
+                </svg>
+                DW.Tech
+            </a>
+            <div id='sitenav'>
+                <a role='button' class='navButton' id='aboutButton'>About</a>
+                <a role='button' class='navButton' id='projectsButton'>Projects</a>
+                <a role='button' class='navButton' id='contactButton'>Contact</a>
+            </div>
+            <div id='toolbar'>
+                <a role='button' class='toolButton' id='github' href='https://github.com/DannyGeorgeWheeler' target='blank'>
+                    <i class="fab fa-github"></i>
                 </a>
-                <div id='sitenav'>
-                    <a role='button' class='navButton' id='aboutButton'>About</a>
-                    <a role='button' class='navButton' id='projectsButton'>Projects</a>
-                    <a role='button' class='navButton' id='contactButton'>Contact</a>
-                </div>
-                <div id='toolbar'>
-                    <a role='button' class='toolButton' id='github'>
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a role='button' class='toolButton' id='darklight'>
-                        <i class="far fa-moon"></i>
-                        <i class="far fa-sun"></i>
-                    </a>
-                </div>
-            </nav>
-        </header>
+                <a role='button' class='toolButton' id='darklight'>
+                    <i class="far fa-moon"></i>
+                    <i class="far fa-sun"></i>
+                </a>
+            </div>
+        </nav>
 
         <!-- MAIN CONTENT -->
         <main>
 
             <!-- INTRODUCTION -->
-            <section>
-
-            </section>
+            <header id='intro' class='pagehead'>
+                <h1>Hey, I'm Danny.</h1>
+                <section id='description'>
+                    <div id='imgcontainer'>
+                        <img src='./resources/images/me.jpg' alt=''/>
+                    </div>
+                    <p>I'm a software engineer in Cambridgeshire, UK.  Welcome to my corner of the web where I am sharing some of my projects and ideas.</p>
+                </section>
+            </header>
 
             <!-- WHAT I'M DOING -->
-            <section>
-
+            <section id='today'>
+                <h2>Today</h2>
+                <p id='doing'>I'm currently studying full-stack web development and working on the Front End.  As it's a <em>Wednesday</em>, i'll probably be listening to <a href='https://podbay.fm/p/giant-bombcast'>The Giant Bombcast</a>, my favourite podcast!</p>
+                <h2>One Day I Will</h2>
+                <ul>
+                    <li>Work as a full-time software engineer!</li>
+                    <li>Build a game.</li>
+                    <li>Work on an open source project.</li>
+                </ul>
+                <h2>Also</h2>
+                <p><a href=''>Read My History...</a></p>
+                <p><a href=''>Check Out My Projects</a></p>
+                <p><a href=''>Get In Touch</a></p>
             </section>
 
             <!-- SOME LINKS -->

@@ -1,7 +1,7 @@
 /* GENERAL STYLES */
 
 html {
-    font-size: 16px;
+    font-size: 18px;
     box-sizing: border-box;
 }
 
@@ -11,21 +11,57 @@ html {
 
 body {
     font-family: 'roboto';
-    line-height: 1.4rem;
-    background-color: hsl(220, 45%, 10%);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    line-height: 1.5rem;
+    background-color: hsl(220, 45%, 15%);
     color: #ddd;
     min-width: 300px;
 }
 
+main {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
 a {
     font-weight: 700;
-    text-decoration: underline;
+    text-decoration: none;
+    color: #ddd;
+    border-bottom: solid 2px hsl(43, 90%, 53%);
 }
 
 a:hover {
     background-color: hsl(43, 90%, 53%);
     color: hsl(220, 47%, 10%);
     text-decoration: none;
+    border-bottom: solid 2px hsl(43, 90%, 53%);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'share';
+    line-height: 3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'share';
+    line-height: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    color: hsl(323, 90%, 53%);
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 0px;
+    margin-bottom: 1rem;
 }
 
 /* NAVIGATION BAR - GENERAL */
@@ -33,34 +69,38 @@ a:hover {
 #navBar {
     display: flex;
     height: 50px;
-    border-bottom: solid 1px hsl(220, 47%, 15%);
+    border-bottom: solid 1px hsl(220, 45%, 15%);
     flex-wrap: wrap;
+    background-color: hsl(220, 45%, 10%);
 }
 
 .navButton, .toolButton {
     padding-left: 1rem;
     padding-right: 1rem;
-    /* line-height: 50px; */
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
-    border-right: solid 1px hsl(220, 47%, 15%);
+    border-right: solid 1px hsl(220, 45%, 15%);
     display: flex;
     align-items: center;
+    border-bottom: none;
 }
 
 .navButton:hover {
     color: #ddd;
-    background-color: hsl(220, 47%, 7%);
+    background-color: hsl(220, 45%, 7%);
     cursor: pointer;
-    /* border-bottom: solid 1px hsl(204, 90%, 53%); */
-    text-decoration: underline hsl(204, 90%, 53%);
+    text-decoration: underline hsl(194, 90%, 53%);
+    border-bottom: none;
+    font-weight: 400;
 }
 
 .toolButton:hover {
     color: hsl(43, 90%, 53%);
-    background-color: hsl(220, 47%, 7%);
+    background-color: hsl(220, 45%, 7%);
     cursor: pointer;
+    border-bottom: none;
+    font-weight: 400;
 }
 
 /* NAVIGATION BAR - LOGO */
@@ -79,7 +119,7 @@ a:hover {
 }
 
 #line2 {
-    stroke:hsl(204, 90%, 53%);
+    stroke:hsl(194, 90%, 53%);
 }
 
 #line3 {
@@ -91,7 +131,7 @@ a:hover {
 }
 
 #logo:hover {
-    color:hsl(204, 90%, 53%);
+    color:hsl(194, 90%, 53%);
     text-decoration: none;
 }
 
@@ -99,7 +139,6 @@ a:hover {
 
 #sitenav {
     display: flex;
-    /* align-content: center; */
     align-items: stretch;
 }
 
@@ -111,14 +150,12 @@ a:hover {
 }
 
 .fa-external-link-alt{
-    /*visibility: hidden;*/
     font-size: 0.7rem;
     vertical-align: super;
 }
 
 .fa-github, .fa-moon, .fa-sun {
     font-size: 1.3rem;
-    /* line-height: 50px; */
 }
 
 .fa-sun {
@@ -129,7 +166,7 @@ a:hover {
 
 @media screen and (max-width: 600px) {
     #navBar {
-        height: 70px;
+        height: 80px;
     }
     
     #logo {
@@ -143,14 +180,65 @@ a:hover {
 
     #toolbar {
         order: 1;
-        /* height: 40px; */
     }
 
     #sitenav {
         order: 2;
         flex-basis: 100%;
-        border-top: solid 1px hsl(220, 47%, 15%);
-        /* height: 40px; */
+        border-top: solid 1px hsl(220, 45%, 15%);
     }
     
+}
+
+
+/* HOME PAGE - INTRO */
+
+#intro {
+    margin-top: 2rem;
+}
+
+#description {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+#imgcontainer {
+    height: 250px;
+    overflow: hidden;
+    align-items: center;
+    flex: 1 1;
+}
+
+#imgcontainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% 40%;
+    border: 3px solid hsl(194, 90%, 53%);
+}
+
+#description p {
+    flex: 1.2 3;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+#intro article {
+    flex-shrink: 3;
+}
+
+@media screen and (max-width: 600px) {
+    #description {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+    #imgcontainer img {
+        width: 300px;
+        height: 250px;
+    }
 }
