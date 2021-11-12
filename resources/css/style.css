@@ -12,8 +12,8 @@ html {
 body {
     font-family: 'roboto';
     font-weight: 300;
-    letter-spacing: 0.04em;
-    line-height: 1.5rem;
+    letter-spacing: 0.05em;
+    line-height: 1.7rem;
     background-color: hsl(220, 45%, 15%);
     color: #ddd;
     min-width: 300px;
@@ -58,7 +58,7 @@ h2 {
     color: hsl(323, 90%, 53%);
 }
 
-p {
+p, ul {
     font-size: 1.1rem;
     margin: 0px;
     margin-bottom: 1rem;
