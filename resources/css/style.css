@@ -30,14 +30,14 @@ a {
     font-weight: 700;
     text-decoration: none;
     color: #ddd;
-    border-bottom: solid 2px hsl(43, 90%, 53%);
+    border-bottom: solid 2px hsl(323, 90%, 53%);
 }
 
 a:hover {
-    background-color: hsl(43, 90%, 53%);
+    background-color: hsl(323, 90%, 53%);
     color: hsl(220, 47%, 10%);
     text-decoration: none;
-    border-bottom: solid 2px hsl(43, 90%, 53%);
+    border-bottom: solid 2px hsl(323, 90%, 53%);
     font-weight: 700;
 }
 
@@ -55,7 +55,7 @@ h2 {
     line-height: 2rem;
     margin-top: 2.5rem;
     margin-bottom: 1.2rem;
-    color: hsl(323, 90%, 53%);
+    color: hsl(43, 90%, 53%);
 }
 
 p, ul {
@@ -90,13 +90,13 @@ p, ul {
     color: #ddd;
     background-color: hsl(220, 45%, 7%);
     cursor: pointer;
-    text-decoration: underline hsl(194, 90%, 53%);
+    text-decoration: underline hsl(323, 90%, 53%);
     border-bottom: none;
     font-weight: 400;
 }
 
 .toolButton:hover {
-    color: hsl(43, 90%, 53%);
+    color: hsl(323, 90%, 53%);
     background-color: hsl(220, 45%, 7%);
     cursor: pointer;
     border-bottom: none;
@@ -131,7 +131,7 @@ p, ul {
 }
 
 #logo:hover {
-    color:hsl(194, 90%, 53%);
+    color:hsl(323, 90%, 53%);
     text-decoration: none;
 }
 
@@ -215,7 +215,7 @@ p, ul {
     width: 100%;
     object-fit: cover;
     object-position: 100% 40%;
-    border: 3px solid hsl(194, 90%, 53%);
+    border: 3px solid hsl(220, 45%, 25%);
 }
 
 #description p {
@@ -241,4 +241,47 @@ p, ul {
         width: 300px;
         height: 250px;
     }
+}
+
+/* PROJECTS PAGE CONTENT */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: hsl(220, 45%, 10%);
+    border: solid 2px hsl(220, 45%, 25%);
+}
+
+.projectCard h2 {
+    margin-top: 0px;
+}
+
+#tags {
+    display: flex;
+    gap: 0.8rem;
+}
+
+#projectLinks {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.projectLink {
+    padding: 0.5rem;
+    background-color: hsl(220, 45%, 15%);
+    border: solid 1px hsl(323, 90%, 53%);
+    line-height: 1rem;
+}
+
+.projectLink:hover {
+    border: solid 1px hsl(220, 45%, 10%);
 }
