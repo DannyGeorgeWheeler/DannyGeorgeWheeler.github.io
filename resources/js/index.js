@@ -1,5 +1,4 @@
 // Change the Today text of index.html depending on day of week.
-
 const today = new Date();
 
 const dailyActivity = new Array(7);
