@@ -65,6 +65,17 @@ p, ul {
     margin-bottom: 1rem;
 }
 
+li {
+    margin-bottom: 0.3rem;
+}
+
+em {
+    color: hsl(323, 90%, 53%);
+    font-style: normal;
+    font-weight: 700;
+}
+
+
 @media screen and (max-width: 650px) {
     main {
         padding: 1rem;
@@ -197,12 +208,13 @@ p, ul {
     
 }
 
-
-/* HOME PAGE - INTRO */
+/* ALL PAGES INTRODUCTION HEADER */
 
 #intro {
     margin-top: 2rem;
 }
+
+/* HOME PAGE - INTRO */
 
 #description {
     display: flex;
@@ -248,6 +260,37 @@ p, ul {
         width: 300px;
         height: 250px;
     }
+}
+
+/* ABOUT ME PAGE CONTENT */
+
+#skills {
+    list-style: none;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 4rem;
+}
+
+.skilltext {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.fa-html5 {
+    color: hsl(12, 78%, 52%);
+}
+
+.fa-js {
+    color: hsl(50, 78%, 55%);
+}
+
+.fa-css3-alt {
+    color: hsl(205, 100%, 37%);
+}
+
+.fa-python {
+    color: hsl(46, 100%, 62%);
 }
 
 /* PROJECTS PAGE CONTENT */
@@ -356,18 +399,9 @@ p, ul {
     cursor: pointer;
 }
 
-.form:invalid {
-    /* border: solid 3px hsl(43, 90%, 50%); */
-}
-
 .error {
     border: solid 3px hsl(4, 70%, 50%);
 }
-
-/* #msg:invalid {
-    border: solid 5px pink;
-} */
-
 
 /* Light Styles */
 
@@ -408,4 +442,8 @@ h2.light {
 
 .toolButton:hover.light {
     color: hsl(323, 90%, 53%);
+}
+
+.fa-python.light {
+    color: hsl(207, 53%, 44%);
 }

@@ -12,11 +12,14 @@ const headings2 = document.querySelectorAll('h2');
 headings2.forEach(heading => {
     toggleElements.push(heading);        
 });
-// get anchors within paragraphs
-const anchors = document.querySelectorAll('p a');
+// get anchors within paragraphs and lists
+const anchors = document.querySelectorAll('p a, li a');
 anchors.forEach(anchor => {
     toggleElements.push(anchor);        
 });
+// get python logo
+const python = document.getElementById('python');
+if (python != null) toggleElements.push(python);    // if python logo exists (page = about)
 // get project cards
 const projects = document.getElementsByClassName('projectCard');
 for (let i=0; i < projects.length; i++) {
@@ -37,6 +40,7 @@ const toggleTheme = () => {
     console.log('the toggle');
     // toggle theme for all elements in array
     for (let i=0; i < toggleElements.length; i++) {
+        console.log(toggleElements[i]);
         toggleElements[i].classList.toggle('light');
     }
 }
@@ -50,7 +54,7 @@ if (theme === null) {
 } else if (theme === 'light') {
     console.log('light on load');
     toggleTheme();
-    document.getElementById('darklight').innerHTML = '<i class="far fa-sun"></i>';
+    document.getElementById('darklight').innerHTML = '<i class="fas fa-sun"></i>';
 } else {
     console.log('dark on load');
 }
@@ -60,10 +64,10 @@ darkButton.onclick = () => {
 
     if (localStorage.getItem('theme') === 'dark') {
         localStorage.setItem('theme', 'light');
-        document.getElementById('darklight').innerHTML = '<i class="far fa-sun"></i>';
+        document.getElementById('darklight').innerHTML = '<i class="fas fa-sun"></i>';
     } else {
         localStorage.setItem('theme', 'dark');
-        document.getElementById('darklight').innerHTML = '<i class="far fa-moon"></i>';
+        document.getElementById('darklight').innerHTML = '<i class="fa fa-moon"></i>';
     }
     console.log(localStorage.getItem('theme'));
 };
