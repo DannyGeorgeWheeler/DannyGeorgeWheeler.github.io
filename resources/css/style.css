@@ -331,9 +331,15 @@ p, ul {
     font-family: 'roboto';
 }
 
+.form:focus {
+    outline: 0;
+    border: 3px solid hsl(43, 90%, 50%);
+    transition: .1s;
+}
+
 #submit {
     background-color: hsl(220, 45%, 15%);
-    border: 2px solid hsl(323, 90%, 53%);
+    border: 2px solid hsl(220, 45%, 25%);
     color: hsl(220, 45%, 95%);
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -350,9 +356,18 @@ p, ul {
     cursor: pointer;
 }
 
-#msg {
-    height: 10rem;
+.form:invalid {
+    /* border: solid 3px hsl(43, 90%, 50%); */
 }
+
+.error {
+    border: solid 3px hsl(4, 70%, 50%);
+}
+
+/* #msg:invalid {
+    border: solid 5px pink;
+} */
+
 
 /* Light Styles */
 

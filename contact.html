@@ -47,20 +47,20 @@
                 <h1>Contact.</h1>
                 <p>I'm open to software engineering opportunities and freelance work. Get in touch.</p>
             </header>
-
             <!-- FORM -->
-            <form id='contact' action='./submit.html' method='post'>
+            <form id='contact' action="https://formspree.io/f/mjvjnrqw" method="post">
                 <label for='name'>Name</label>
-                <input type='text' id='name' name='name' class='form'>
+                <input type='text' id='name' name='name' class='form' required>
                 <label for='email'>Email</label>
-                <input type='email' id='email' name='email' class='form'>
+                <input type='email' id='email' name='email' class='form' required>
                 <label for='msg'>Message</label>
-                <textarea id='msg' name='message' class='form'></textarea>
+                <textarea id='msg' name='message' class='form' rows='6'></textarea>
                 <button type='submit' id='submit' class='form'>Send</button>
             </form>
 
         </main>
 
+        <script type='text/javascript' src='./resources/js/contact.js'></script>
         <script type='text/javascript' src='./resources/js/theme.js'></script>
     </body>
 </html>
