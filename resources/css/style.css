@@ -176,10 +176,6 @@ em {
     font-size: 1.3rem;
 }
 
-/* .fa-sun {
-    display: none;
-} */
-
 /* MOBILE STYLE - NAVIGATION BAR */
 
 @media screen and (max-width: 650px) {
@@ -247,6 +243,8 @@ em {
     flex-shrink: 3;
 }
 
+/* MOBILE STYLE HOME PAGE */
+
 @media screen and (max-width: 650px) {
     #description {
         flex-direction: column;
@@ -291,6 +289,14 @@ em {
 
 .fa-python {
     color: hsl(46, 100%, 62%);
+}
+
+/* MOBILE STYLE ABOUT ME PAGE */
+
+@media screen and (max-width: 650px) {
+    #skills {
+        padding: 0;
+    }
 }
 
 /* PROJECTS PAGE CONTENT */
