@@ -66,8 +66,8 @@
                 <p>On smaller screens I wanted the page links to drop to a second row but to leave the toolbar buttons and the logo on the top row.  It seemed like the neatest way to display the elements on a small screen without resorting to a burger menu.  Searching the <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items' target='blank'>MDN docs</a>, I found the <span class='code'>order:</span> property. With this, I reorder the elements so that the group of page links are after the toolbar buttons and use <span class='code'>flex-basis: 100%;</span> to force a new row.</p>
                 <img class='screenshot' src='../resources/images/portfolio-screenshot3.png' alt='navigation bar and projects page on smaller screen' />
                 <h2>JavaScript Interactivity</h2>
-                <p>I'm a huge fan of <em>dark mode</em> on my devices and spend most of my time set to dark. So I wanted to learn how to implement a dark mode for myself. </p>
-                <p>In decided to tackle the problem on my own without finding a ready made solution, and I'm sure it is more code and less efficient as a result, but it was a good learning process!</p>
+                <p>I'm a huge fan of dark mode on my devices and spend most of my time set to dark. So I wanted to learn how to implement a dark mode for myself. </p>
+                <p>I decided to tackle the problem on my own without finding a ready made solution, and I'm sure it is more code and less efficient as a result, but it was a good learning process!</p>
                 <p>First I added the elements that need re-styling to an array. </p>
                 <img class='codeshot' src='../resources/images/portfolio-code1.png' alt=''/>
                 <p>Then I made a function <span class='code'>toggleTheme()</span> that simply loops through the elements within the array and uses the <span class='code'>toggle()</span> method of the <span class='code'>classList</span> property. In my stylesheet, each element in the array has a corresponding <span class='code'>.light</span> class, which is added or removed (toggled).</p>
