@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='stylesheet' href='../resources/css/normalize.css' />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Share&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3aef6050a6.js" crossorigin="anonymous"></script>
+        <link rel='stylesheet' href='../resources/css/style.css' />
+
+        <title>Danny Wheeler</title>
+    </head>
+    <body>
+
+        <!-- NAVIGATION BAR -->
+        <nav id='navBar'>
+            
+            <a role='button' class='navButton' id='logo' href='../index.html'>
+                <svg id='shapes'>
+                    <line class='line' id='line1' x1="25" y1="-5" x2="10" y2="30" />
+                    <line class='line' id='line2' x1="35" y1="-5" x2="20" y2="30" />
+                    <line class='line' id='line3' x1="45" y1="-5" x2="30" y2="30" />
+                </svg>
+                DW.Tech
+            </a>
+            <div id='sitenav'>
+                <a role='button' class='navButton' id='aboutButton' href='../about.html'>About</a>
+                <a role='button' class='navButton' id='projectsButton' href='../projects.html'>Projects</a>
+                <a role='button' class='navButton' id='contactButton' href='../contact.html'>Contact</a>
+            </div>
+            <div id='toolbar'>
+                <a role='button' class='toolButton' id='github' href='https://github.com/DannyGeorgeWheeler' target='blank'>
+                    <i class="fab fa-github"></i>
+                </a>
+                <a role='button' class='toolButton' id='darklight'>
+                    <i class="fa fa-moon"></i></a>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <!-- INTRODUCTION -->
+            <header id='intro'>
+                <h1>Danny Wheeler Portfolio.</h1>
+                <p class='projectabout'>The website you are looking at.</p>
+            </header>
+
+            <!-- The Article -->
+            <article>
+                <p>This is the first website I have created without using a service in nearly 20 years!  Sadly I have no record of the one before, but I remember it having a cool banner image of <a href='https://en.wikipedia.org/wiki/Rey_Mysterio' target='blank'>Rey Mysterio</a> colourised in blue. And it used an I-Frame to avoid repeated navigation code... unlike this website.</p>
+                <img class='screenshot' src='../resources/images/portfolio-screenshot1.png' alt='portfolio index page' />
+                <p>But the repetition was intentional here, because I was limiting myself to vanilla HTML, CSS and JS and wanted to keep things simple.  Practicing the skills I'd learnt so far on <a href='https://www.codecademy.com/' target='blank'>Code-academy</a>, only venturing out to figure out some simple form functionality.</p>
+                <p>My project objectives were to:</p>
+                <ul>
+                    <li>Make it responsive.</li>
+                    <li>Include some form of JavaScript interactivity.</li>
+                    <li>Include some dynamic content.</li>
+                    <li>Use Git version control.</li>
+                </ul>
+                <h2>Responsive</h2>
+                <p>The majority of the responsive behaviour on the website was simple to implement and I decided to limit the media queries to <span class='code'>max-width: 650px</span> for extra simplicity. I fiddled with some display options for the index and projects pages to create a single column layout on smaller screens.</p>
+                <img class='screenshot' src='../resources/images/portfolio-screenshot2.png' alt='navigation bar and projects page on larger screen' />
+                <p>The most difficult element to restyle for smaller screens was, without doubt, the navigation bar.  On the full page design the logo and page links are to the left of the bar and a couple of 'toolbar' buttons are to the right of the bar.  The navbar has a flex display and the toolbar buttons are grouped in a div with <span class='code'>margin-left: auto;</span> applied to keep them to the right.</p>
+                <p>On smaller screens I wanted the page links to drop to a second row but to leave the toolbar buttons and the logo on the top row.  It seemed like the neatest way to display the elements on a small screen without resorting to a burger menu.  Searching the <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items' target='blank'>MDN docs</a>, I found the <span class='code'>order:</span> property. With this, I reorder the elements so that the group of page links are after the toolbar buttons and use <span class='code'>flex-basis: 100%;</span> to force a new row.</p>
+                <img class='screenshot' src='../resources/images/portfolio-screenshot3.png' alt='navigation bar and projects page on smaller screen' />
+                <h2>JavaScript Interactivity</h2>
+                <p>I'm a huge fan of <em>dark mode</em> on my devices and spend most of my time set to dark. So I wanted to learn how to implement a dark mode for myself. </p>
+                <p>In decided to tackle the problem on my own without finding a ready made solution, and I'm sure it is more code and less efficient as a result, but it was a good learning process!</p>
+                <p>First I added the elements that need re-styling to an array. </p>
+                <img class='codeshot' src='../resources/images/portfolio-code1.png' alt=''/>
+                <p>Then I made a function <span class='code'>toggleTheme()</span> that simply loops through the elements within the array and uses the <span class='code'>toggle()</span> method of the <span class='code'>classList</span> property. In my stylesheet, each element in the array has a corresponding <span class='code'>.light</span> class, which is added or removed (toggled).</p>
+                <img class='codeshot' src='../resources/images/portfolio-code2.png' alt=''/>
+                <img class='codeshot' src='../resources/images/portfolio-code3.png' alt=''/>
+                <p>This works great for the current page, but when you navigate it would switch back to the dark theme.  I needed to store some information, but couldn't simply do this within a javascript variable, because the js document is freshly loaded along with each new page.  So instead, I used the <span class='code'>localStorage</span> property to create a key value pair that saves the current theme setting.</p>
+                <img class='codeshot' src='../resources/images/portfolio-code4.png' alt=''/>
+                <p>The added benefit of using <span class='code'>localStorage</span> (as opposed to <span class='code'>sessionStorage</span>), is that the setting will generally persist until a user clears their browsing data or cookies.</p>
+                <p>The final piece of the puzzle was changing the font awesome icon on the button from a moon to a sun when the dark mode is toggled, which I did by editing the <span class='code'>.innerHTML</span> property.</p>
+                <img class='screenshot' src='../resources/images/portfolio-screenshot4.png' alt='About page toggled to light theme' />
+                <h2>Dynamic Content</h2>
+                <p>I wasn't looking for anything fancy here. I just wanted to practice changing the content of the HTML using JavaScript. My index page contains a Today section, where I talk about what I'm currently doing, be that employment or study wise.  And the simple idea to add some dynamic content was to add what I am typically doing on the current day of the week, to add a bit more personality. </p>
+                <img class='codeshot' src='../resources/images/portfolio-code5.png' alt='' />
+                <p>Here I've used the built in javascript <span class='code'>date</span> class to create a new <span class='code'>date</span> object.  This has a <span class='code'>getDay()</span> method i'll use, which returns an integer between 0-6 corresponding to the day of the week (where 0 == Sunday). But first I created an array of messages where each items index corresponds to the day of the week they relate to. </p>
+                <img class='codeshot' src='../resources/images/portfolio-code6.png' alt='' />
+                <p>All that remains is to use the <span class='code'>getDay()</span> method to assign the right message to some HTML code.  Then insert that code into the element on the index page.</p>
+                <img class='codeshot' src='../resources/images/portfolio-code7.png' alt='' />
+                <h2>Summary</h2>
+                <p>So that about sums up this project and the main pieces of information I wanted to have stored for future reference.  The source-code is viewable on my <a href='https://github.com/DannyGeorgeWheeler/DannyGeorgeWheeler.github.io'>GitHub</a>, but as it's my live portfolio website, I expect it will change over time and may not completely reflect the contents of this article. </p>
+
+
+
+            </article>
+
+        </main>
+
+        <script type='text/javascript' src='../resources/js/theme.js'></script>
+    </body>
+</html>

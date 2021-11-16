@@ -3,9 +3,9 @@ const darkButton = document.getElementById('darklight');
 toggleElements = []; // list of elements to style
 // get single elements
 toggleElements.push(
-    document.body,                                  // body
-    document.getElementById('navBar'),              // navigation bar
-    document.querySelector('h1'),                   // main headings
+    document.body,
+    document.getElementById('navBar'),
+    document.querySelector('h1'),
     );
 // get secondary headings
 const headings2 = document.querySelectorAll('h2');
@@ -37,10 +37,8 @@ for (let i=0; i < toolButtons.length; i++) {
 }
 
 const toggleTheme = () => {
-    console.log('the toggle');
     // toggle theme for all elements in array
     for (let i=0; i < toggleElements.length; i++) {
-        console.log(toggleElements[i]);
         toggleElements[i].classList.toggle('light');
     }
 }
@@ -49,14 +47,10 @@ const toggleTheme = () => {
 const theme = localStorage.getItem('theme');
 
 if (theme === null) {
-    console.log('null on load')
     localStorage.setItem('theme', 'dark');
 } else if (theme === 'light') {
-    console.log('light on load');
     toggleTheme();
     document.getElementById('darklight').innerHTML = '<i class="fas fa-sun"></i>';
-} else {
-    console.log('dark on load');
 }
 
 darkButton.onclick = () => {
@@ -69,5 +63,4 @@ darkButton.onclick = () => {
         localStorage.setItem('theme', 'dark');
         document.getElementById('darklight').innerHTML = '<i class="fa fa-moon"></i>';
     }
-    console.log(localStorage.getItem('theme'));
 };

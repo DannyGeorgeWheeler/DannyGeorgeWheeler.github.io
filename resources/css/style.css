@@ -109,7 +109,8 @@ em {
     color: hsl(224, 44%, 95%);
     background-color: hsl(220, 45%, 7%);
     cursor: pointer;
-    text-decoration: underline hsl(323, 90%, 53%);
+    text-decoration: underline hsl(323, 90%, 53%) 2px;
+    text-underline-offset: 4px;
     border-bottom: none;
     font-weight: 400;
 }
@@ -309,8 +310,8 @@ em {
 /* PROJECTS PAGE CONTENT */
 
 #projects {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-top: 4rem;
 }
@@ -364,12 +365,42 @@ em {
     font-weight: 400;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 650px) {
     #projects {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
+        display: flex;
+        flex-direction: column;
     }
+}
+
+/* PROJECT ARTICLE PAGE */
+
+.projectabout {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
+}
+
+.screenshot {
+    max-width: 90%;
+    margin: 3rem auto;
+    display: block;
+    border: 2px solid hsl(43, 90%, 50%);
+}
+
+.code {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #eee;
+    background-color: #222;
+    padding: 0.1rem 0.2rem;
+}
+
+.codeshot {
+    max-width: 100%;
+    border: 2px solid hsl(220, 45%, 25%);
+    margin: 2.5rem 0;
+    display: block;
 }
 
 /* CONTACT PAGE CONTENT */
